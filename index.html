@@ -1,46 +1,416 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/gymlock/">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="gymlocksaas">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>gymlocksaas</title>
-  <link rel="manifest" href="manifest.json">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GymSathi.online — 100% Original Supplements</title>
+  <meta name="description" content="Buy 100% original whey protein, mass gainers, creatine, pre-workout, vitamins and more from trusted brands. Free delivery above ₹999. COD available." />
+  <meta name="theme-color" content="#0c3d23" />
+  <link rel="icon" href="assets/img/logo-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Kaushan+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!--
-    You can customize the "flutter_bootstrap.js" script.
-    This is useful to provide a custom configuration to the Flutter loader
-    or to give the user feedback during the initialization process.
 
-    For more details:
-    * https://docs.flutter.dev/platform-integration/web/initialization
-  -->
-  <script src="flutter_bootstrap.js" async></script>
+  <!-- SVG icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+      <symbol id="i-cash" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+      <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+      <symbol id="i-return" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></symbol>
+      <symbol id="i-dumbbell" viewBox="0 0 24 24"><path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/></symbol>
+      <symbol id="i-scale" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 9a5 5 0 0 1 8 0"/><path d="m12 11 1.5-2"/></symbol>
+      <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/></symbol>
+      <symbol id="i-boxes" viewBox="0 0 24 24"><path d="M7 12 3 14.5v4.5l4 2.5 4-2.5v-4.5zM17 12l-4 2.5v4.5l4 2.5 4-2.5v-4.5zM12 3 8 5.5V10l4 2.5 4-2.5V5.5z"/></symbol>
+      <symbol id="i-rupee-return" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M9.5 8.5h5M9.5 11h5M12 8.5c2 0 2 4 0 4h-2.5l4 3.5"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><circle cx="12" cy="16" r="1"/></symbol>
+      <symbol id="i-headset" viewBox="0 0 24 24"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M21 15a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2zM3 15a2 2 0 0 0 2 2h1v-5H5a2 2 0 0 0-2 2z"/><path d="M18 17a4 4 0 0 1-4 4h-2"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></symbol>
+      <symbol id="i-muscle" viewBox="0 0 24 24"><path d="M7 20c-2 0-3-2-3-4 0-4 3-7 5-10l2-3 3 1-1 3 2 2c3-1 6 1 6 5 0 3-2 6-6 6z"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5.1-6"/></symbol>
+      <symbol id="i-recover" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V21H3z"/><path d="m9 14 2 2 4-4"/></symbol>
+      <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.4 5.1 5.3-1.4A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 1 1 7 3.9zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3z"/></symbol>
+      <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+      <symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15V9l5.8 3z"/></symbol>
+      <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span><svg><use href="#i-shield"/></svg>100% Original Products</span>
+        <span><svg><use href="#i-truck"/></svg>Free Delivery on Orders above ₹999</span>
+        <span><svg><use href="#i-cash"/></svg>Cash on Delivery Available</span>
+      </div>
+      <div class="topbar__right">
+        <a href="#" data-toast="Order tracking will be available after your first order."><svg><use href="#i-pin"/></svg>Track Order</a>
+        <a href="#contact"><svg><use href="#i-help"/></svg>Need Help?</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <button class="icon-btn header__menu" id="menuBtn" aria-label="Open menu"><svg><use href="#i-menu"/></svg></button>
+      <a href="#top" class="logo">
+        <img src="assets/img/logo-icon.png" alt="" width="46" height="42" />
+        <span class="logo__text">
+          <span class="logo__name">GymSathi<b>.online</b></span>
+          <span class="logo__tag">Supplements for a stronger you</span>
+        </span>
+      </a>
+      <form class="search" id="searchForm" role="search">
+        <input type="search" id="searchInput" placeholder="Search for protein, creatine, brands..." aria-label="Search products" />
+        <button type="submit" aria-label="Search"><svg><use href="#i-search"/></svg></button>
+      </form>
+      <a href="#" class="account" data-toast="Sign in / Sign up is coming soon.">
+        <svg><use href="#i-user"/></svg>
+        <span><strong>Account</strong><small>Sign In / Sign Up</small></span>
+      </a>
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+        <svg><use href="#i-cart"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+    <nav class="nav" id="nav">
+      <div class="container nav__inner">
+        <a href="#best" class="active" data-filter="all">All Products</a>
+        <a href="#best" data-filter="whey">Protein</a>
+        <a href="#best" data-filter="mass">Mass Gainers</a>
+        <a href="#best" data-filter="creatine">Creatine</a>
+        <a href="#best" data-filter="preworkout">Pre-Workout</a>
+        <a href="#best" data-filter="vitamins">Vitamins</a>
+        <a href="#best" data-filter="amino">Amino Acids</a>
+        <a href="#best" data-filter="wellness">Health &amp; Wellness</a>
+        <a href="#best" data-filter="accessories">Accessories</a>
+        <a href="#brands">Brands</a>
+        <a href="#offer" class="nav__deals">Deals <em>HOT</em></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">Your Fitness Partner <span></span></p>
+          <h1>Real Supplements<br />Real <span>Results</span></h1>
+          <p class="hero__sub">100% Original Supplements from Trusted Brands.<br />Build Muscle. Gain Strength. Stay Healthy.<br />All at <strong>GymSathi.online</strong></p>
+          <a href="#best" class="btn btn--lime">Shop Now <svg><use href="#i-arrow"/></svg></a>
+          <ul class="hero__points">
+            <li><svg><use href="#i-shield"/></svg><span>100% Original<br />Products</span></li>
+            <li><svg><use href="#i-truck"/></svg><span>Fast &amp; Secure<br />Delivery</span></li>
+            <li><svg class="wa"><use href="#i-wa"/></svg><span>Expert Guidance<br />Chat on WhatsApp</span></li>
+          </ul>
+        </div>
+        <div class="hero__media">
+          <img src="assets/img/hero.jpg" alt="Athlete lifting dumbbells beside whey protein, creatine, Nitro Tech and C4 supplements" width="1396" height="936" fetchpriority="high" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="container">
+      <ul class="trust">
+        <li><svg><use href="#i-shield"/></svg><div><strong>100% Genuine</strong><small>&amp; Authentic Products</small></div></li>
+        <li><svg><use href="#i-truck"/></svg><div><strong>Free Delivery</strong><small>on Orders above ₹999</small></div></li>
+        <li><svg><use href="#i-return"/></svg><div><strong>Easy Returns</strong><small>Hassle Free</small></div></li>
+        <li><svg><use href="#i-cash"/></svg><div><strong>COD Available</strong><small>Pay at Your Doorstep</small></div></li>
+        <li><svg class="wa-badge"><use href="#i-wa"/></svg><div><strong>Expert Support</strong><small>Chat on WhatsApp</small></div></li>
+      </ul>
+    </section>
+
+    <!-- Categories -->
+    <section class="section container" id="categories">
+      <div class="section__head">
+        <h2>Shop by Category</h2>
+        <a href="#best" class="view-all">View All <svg><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="cats">
+        <a href="#best" class="cat" data-filter="whey"><img src="assets/img/cat-1.jpg" alt="Whey Protein" loading="lazy" /><span>Whey Protein</span></a>
+        <a href="#best" class="cat" data-filter="mass"><img src="assets/img/cat-2.jpg" alt="Mass Gainers" loading="lazy" /><span>Mass Gainers</span></a>
+        <a href="#best" class="cat" data-filter="creatine"><img src="assets/img/cat-3.jpg" alt="Creatine" loading="lazy" /><span>Creatine</span></a>
+        <a href="#best" class="cat" data-filter="preworkout"><img src="assets/img/cat-4.jpg" alt="Pre-Workout" loading="lazy" /><span>Pre-Workout</span></a>
+        <a href="#best" class="cat" data-filter="vitamins"><img src="assets/img/cat-5.jpg" alt="Vitamins" loading="lazy" /><span>Vitamins</span></a>
+        <a href="#best" class="cat" data-filter="amino"><img src="assets/img/cat-6.jpg" alt="Amino Acids" loading="lazy" /><span>Amino Acids</span></a>
+        <a href="#best" class="cat" data-filter="wellness"><img src="assets/img/cat-7.jpg" alt="Health &amp; Wellness" loading="lazy" /><span>Health &amp; Wellness</span></a>
+        <a href="#best" class="cat" data-filter="accessories"><img src="assets/img/cat-8.jpg" alt="Accessories" loading="lazy" /><span>Accessories</span></a>
+      </div>
+    </section>
+
+    <!-- Offer banner -->
+    <section class="container" id="offer">
+      <div class="offer">
+        <div class="offer__text">
+          <p class="offer__flat">Flat</p>
+          <p class="offer__big">20% OFF</p>
+          <p class="offer__sub">On Top Supplement Brands</p>
+          <a href="#best" class="btn btn--green">Shop Now <svg><use href="#i-arrow"/></svg></a>
+        </div>
+        <img class="offer__img" src="assets/img/promo.jpg" alt="Whey protein, Nitro Tech and creatine tubs on a rock with green leaves" loading="lazy" />
+        <ul class="offer__list">
+          <li><span><svg><use href="#i-muscle"/></svg></span>Build Lean Muscle</li>
+          <li><span><svg><use href="#i-bolt"/></svg></span>Boost Performance</li>
+          <li><span><svg><use href="#i-recover"/></svg></span>Recover Faster</li>
+          <li><span><svg><use href="#i-leaf"/></svg></span>Stay Healthier</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Best sellers -->
+    <section class="section container" id="best">
+      <div class="section__head section__head--wrap">
+        <h2>Best Selling Supplements</h2>
+        <div class="tabs" id="tabs">
+          <button class="active" data-filter="all">All</button>
+          <button data-filter="whey">Whey Protein</button>
+          <button data-filter="creatine">Creatine</button>
+          <button data-filter="preworkout">Pre-Workout</button>
+          <button data-filter="mass">Mass Gainers</button>
+          <button data-filter="vitamins">Vitamins</button>
+        </div>
+        <div class="arrows">
+          <button class="arrow" data-scroll="#products" data-dir="-1" aria-label="Previous"><svg><use href="#i-arrow-l"/></svg></button>
+          <button class="arrow" data-scroll="#products" data-dir="1" aria-label="Next"><svg><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+      <div class="products" id="products"></div>
+      <p class="empty" id="emptyMsg" hidden>No products match your search. <button class="link" id="clearSearch">Show all</button></p>
+    </section>
+
+    <!-- Goals -->
+    <section class="section container">
+      <div class="section__head">
+        <h2>Shop by Your Fitness Goal</h2>
+        <a href="#best" class="view-all">View All <svg><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="goals">
+        <a href="#best" class="goal" data-filter="whey"><img src="assets/img/goal-1.jpg" alt="Muscular athlete in a gym" loading="lazy" /><div class="goal__label"><svg><use href="#i-dumbbell"/></svg><div><strong>Build<br />Muscle</strong><small>Shop Now <svg><use href="#i-arrow"/></svg></small></div></div></a>
+        <a href="#best" class="goal" data-filter="mass"><img src="assets/img/goal-2.jpg" alt="Man drinking a protein shake" loading="lazy" /><div class="goal__label"><svg><use href="#i-scale"/></svg><div><strong>Gain<br />Weight</strong><small>Shop Now <svg><use href="#i-arrow"/></svg></small></div></div></a>
+        <a href="#best" class="goal" data-filter="preworkout"><img src="assets/img/goal-3.jpg" alt="Man running outdoors at dusk" loading="lazy" /><div class="goal__label"><svg><use href="#i-bolt"/></svg><div><strong>Improve<br />Performance</strong><small>Shop Now <svg><use href="#i-arrow"/></svg></small></div></div></a>
+        <a href="#best" class="goal" data-filter="vitamins"><img src="assets/img/goal-4.jpg" alt="Woman training in a gym" loading="lazy" /><div class="goal__label"><svg><use href="#i-heart"/></svg><div><strong>Better<br />Health</strong><small>Shop Now <svg><use href="#i-arrow"/></svg></small></div></div></a>
+      </div>
+    </section>
+
+    <!-- Brands -->
+    <section class="section container" id="brands">
+      <div class="section__head">
+        <h2>Top Brands We Offer</h2>
+        <a href="#best" class="view-all">View All <svg><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="brands">
+        <div class="brand brand--on"><b>ON</b><small>Optimum<br />Nutrition</small></div>
+        <div class="brand brand--mt">MuscleTech</div>
+        <div class="brand brand--mp"><b>M</b><small>Myprotein</small></div>
+        <div class="brand brand--gnc"><b>GNC</b><small>Live Well</small></div>
+        <div class="brand brand--dym"><i>▶</i>Dymatize</div>
+        <div class="brand brand--sci">SCITRON</div>
+        <div class="brand brand--nb">NUTRABAY</div>
+      </div>
+    </section>
+
+    <!-- Why choose -->
+    <section class="why">
+      <div class="why__content">
+        <h2>Why Choose GymSathi.online?</h2>
+        <ul class="why__grid">
+          <li><svg><use href="#i-shield"/></svg><div><strong>100% Authentic</strong><small>Products</small></div></li>
+          <li><svg><use href="#i-boxes"/></svg><div><strong>Wide Range</strong><small>Top Brands</small></div></li>
+          <li><svg><use href="#i-truck"/></svg><div><strong>Fast Delivery</strong><small>Across India</small></div></li>
+          <li><svg><use href="#i-rupee-return"/></svg><div><strong>Easy Returns</strong><small>Hassle Free</small></div></li>
+          <li><svg><use href="#i-lock"/></svg><div><strong>Secure Payments</strong><small>UPI, Cards, COD</small></div></li>
+          <li><svg><use href="#i-headset"/></svg><div><strong>Expert Guidance</strong><small>Fitness Experts</small></div></li>
+        </ul>
+      </div>
+      <div class="why__media"><img src="assets/img/why.jpg" alt="Athlete doing pull-ups — Your Fitness Sathi" loading="lazy" /></div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section container">
+      <div class="section__head">
+        <h2>What Our Customers Say</h2>
+        <div class="arrows">
+          <button class="arrow" data-scroll="#reviews" data-dir="-1" aria-label="Previous"><svg><use href="#i-arrow-l"/></svg></button>
+          <button class="arrow" data-scroll="#reviews" data-dir="1" aria-label="Next"><svg><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+      <div class="reviews" id="reviews">
+        <article class="review">
+          <header><span class="avatar" style="--h:150">RK</span><div><strong>Rohit Kumar <svg class="tick"><use href="#i-check"/></svg></strong><small>Verified Purchase</small><span class="stars">★★★★★</span></div></header>
+          <p>100% original products and super fast delivery. Packaging was excellent. Definitely buying again!</p>
+        </article>
+        <article class="review">
+          <header><span class="avatar" style="--h:210">AV</span><div><strong>Ankit Verma <svg class="tick"><use href="#i-check"/></svg></strong><small>Verified Purchase</small><span class="stars">★★★★★</span></div></header>
+          <p>Best prices and genuine products. Customer support is also very helpful. Highly recommended!</p>
+        </article>
+        <article class="review">
+          <header><span class="avatar" style="--h:330">PS</span><div><strong>Priya Sharma <svg class="tick"><use href="#i-check"/></svg></strong><small>Verified Purchase</small><span class="stars">★★★★★</span></div></header>
+          <p>Loved the quality! Products are authentic and delivery was on time. Great experience!</p>
+        </article>
+        <article class="review">
+          <header><span class="avatar" style="--h:30">SM</span><div><strong>Sahil Mehra <svg class="tick"><use href="#i-check"/></svg></strong><small>Verified Purchase</small><span class="stars">★★★★★</span></div></header>
+          <p>Ordered creatine and whey together, both sealed with authenticity codes. COD made it easy.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Instagram -->
+    <section class="section container">
+      <div class="section__head">
+        <h2>Follow Us on Instagram <span class="handle">@gymsathi.online</span></h2>
+        <a href="#" class="view-all">View All <svg><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="insta">
+        <a href="#"><img src="assets/img/insta-1.jpg" alt="GymSathi shaker bottle" loading="lazy" /></a>
+        <a href="#"><img src="assets/img/insta-2.jpg" alt="Man lifting a barbell" loading="lazy" /></a>
+        <a href="#"><img src="assets/img/insta-3.jpg" alt="Whey protein tub with leaves" loading="lazy" /></a>
+        <a href="#"><img src="assets/img/insta-4.jpg" alt="Healthy oats bowl" loading="lazy" /></a>
+        <a href="#"><img src="assets/img/insta-5.jpg" alt="Athlete training in the gym" loading="lazy" /></a>
+        <a href="#"><img src="assets/img/insta-6.jpg" alt="Whey protein in a gym" loading="lazy" /></a>
+        <a href="#"><img src="assets/img/insta-7.jpg" alt="Woman training in the gym" loading="lazy" /></a>
+        <a href="#"><img src="assets/img/insta-8.jpg" alt="Discipline today, results tomorrow" loading="lazy" /></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container newsletter__inner">
+      <svg class="newsletter__icon"><use href="#i-mail"/></svg>
+      <div class="newsletter__text">
+        <h3>Get Exclusive Offers, New Arrivals &amp; Fitness Tips</h3>
+        <p>Join our newsletter and be the first to know about new products, discounts and expert advice.</p>
+      </div>
+      <form class="newsletter__form" id="newsForm">
+        <input type="email" required placeholder="Enter your email address" aria-label="Email address" />
+        <button class="btn btn--green" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container footer__grid">
+      <div class="footer__about">
+        <a href="#top" class="logo logo--light">
+          <img src="assets/img/logo-icon.png" alt="" width="40" height="36" />
+          <span class="logo__text">
+            <span class="logo__name">GymSathi<b>.online</b></span>
+            <span class="logo__tag">Supplements for a stronger you</span>
+          </span>
+        </a>
+        <p>Your trusted source for 100% genuine supplements, premium brands and expert guidance. Build a stronger, healthier you with GymSathi.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg><use href="#i-yt"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+          <a href="#" class="js-wa" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#best" data-filter="all">All Products</a></li>
+          <li><a href="#best" data-filter="whey">Protein</a></li>
+          <li><a href="#best" data-filter="mass">Mass Gainers</a></li>
+          <li><a href="#best" data-filter="creatine">Creatine</a></li>
+          <li><a href="#best" data-filter="preworkout">Pre-Workout</a></li>
+          <li><a href="#best" data-filter="vitamins">Vitamins</a></li>
+          <li><a href="#best" data-filter="wellness">Health &amp; Wellness</a></li>
+          <li><a href="#best" data-filter="accessories">Accessories</a></li>
+          <li><a href="#offer">Deals</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Customer Support</h4>
+        <ul>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Returns &amp; Refunds</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#">Size Guide</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Promise</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <ul class="contact">
+          <li><svg><use href="#i-phone"/></svg><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><svg><use href="#i-mail"/></svg><a href="mailto:support@gymsathi.online">support@gymsathi.online</a></li>
+          <li><svg><use href="#i-clock"/></svg>Mon - Sat, 9 AM - 8 PM</li>
+        </ul>
+        <a href="#" class="btn btn--wa js-wa"><svg><use href="#i-wa"/></svg>Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> GymSathi.online. All rights reserved.</p>
+      <img src="assets/img/payments.jpg" alt="We accept UPI, Visa, Mastercard, RuPay and Cash on Delivery" class="payments" loading="lazy" />
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="#" class="wa-float js-wa" aria-label="Chat on WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+  <!-- Cart drawer -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="cart" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer__head">
+      <h3>Your Cart</h3>
+      <button class="icon-btn" id="cartClose" aria-label="Close cart"><svg><use href="#i-x"/></svg></button>
+    </div>
+    <div class="drawer__body" id="cartItems"></div>
+    <div class="drawer__foot">
+      <div class="row"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div>
+      <div class="row muted"><span>Delivery</span><span id="cartDelivery">—</span></div>
+      <div class="row total"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+      <p class="free-note" id="freeNote"></p>
+      <button class="btn btn--wa btn--block" id="checkoutBtn"><svg><use href="#i-wa"/></svg>Order on WhatsApp (COD / UPI)</button>
+    </div>
+  </aside>
+
+  <!-- Mobile menu -->
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="drawer__head">
+      <h3>Menu</h3>
+      <button class="icon-btn" id="menuClose" aria-label="Close menu"><svg><use href="#i-x"/></svg></button>
+    </div>
+    <nav id="mobileNav"></nav>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
